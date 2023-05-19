@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Length Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: lightskyblue;
+            margin: 100px;
+        }
+        div {
+            background-color: whitesmoke;
+            padding: 60px;
+            text-align: center;
+        }
+        h2 {
+            color: darkslategray;
+        }
+        input {
+            margin: 15px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h2><b>˗ˏˋ Convert Millimeters ´ˎ˗</b></h2>
+    <br>
+    <input type="number" class="form-control" name="millimeter" id="id1" placeholder="Enter Millimeter Value">
+    <br><br>
+    <input type="submit" value="Centimeter" onclick="myFunction1()">
+    <input type="submit" value="Meter" onclick="myFunction2()">
+    <input type="submit" value="Kilometer"onclick="myFunction3()">
+    <p id="id2"></p>
+    <script>
+        function myFunction1 () {
+            var num1 = document.getElementById('id1').value;
+            var answer = num1 / 10;
+            document.getElementById('id2').innerHTML = num1 + " Millimeters is equivalent to " + answer + " centimeters."
+        }
+        function myFunction2 () {
+            var num2 = document.getElementById('id1').value;
+            var answer = num2 / 1000;
+            document.getElementById('id2').innerHTML = num2 + " Millimeters is equivalent to " + answer + " meters.";
+        }
+
+        function myFunction3 () {
+            var num3 = document.getElementById('id1').value;
+            var answer = num3 / 1000000;
+            document.getElementById('id2').innerHTML = num3 + " Millimeters is equivalent to " + answer + " kilometers.";
+        }
+    </script>
+</body>
+</html>
